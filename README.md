@@ -19,6 +19,18 @@ To interpolate the colour schemes in CIELab space, the FEX package
 is required.
 
 
+Samples
+-------
+
+The palettes available are shown in the image below.
+Each colour scheme is shown with its maximum number of colours, along with an
+interpolated colormap generated from the scheme.
+
+Note that qualitative type colour schemes are never interpolated.
+
+![Samples swatches](images/cbrewer2_samples.png)
+
+
 Licensing
 ---------
 
