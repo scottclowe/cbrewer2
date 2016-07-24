@@ -118,7 +118,7 @@ cbdict = {...
 
 % Input handling ----------------------------------------------------------
 
-error(nargchk(1, 5, nargin, 'struct'));
+narginchk(1, 5);
 
 % Initialise variables if not supplied
 if nargin<2
