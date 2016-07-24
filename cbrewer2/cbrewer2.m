@@ -219,7 +219,7 @@ end
 
 % Don't interpolate if qualitative type
 if strcmp(ctype,'qual')
-    if size(colormap, 1) > ncol
+    if size(colormap, 1) >= ncol
         colormap = colormap(1:ncol, :);
         return;
     end
