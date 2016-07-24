@@ -3,7 +3,10 @@
 %   of colours equal to NCOL. If there is a ColorBrewer scheme with exactly
 %   this number of colours, the color scheme is returned as-is. If NCOL
 %   larger (or smaller) than the designed colormaps for this scheme, the
-%   largest (smallest) one is interpolated to provide enough colours.
+%   largest (smallest) one is interpolated to provide enough colours,
+%   unless the requested colour scheme CNAME is a qualitative palette. For
+%   a qualitative scheme, the colours are repeated, cycling from the
+%   beginning again, to output the requested NCOL colours.
 %
 %   CBREWER2(CNAME) without an NCOL input will use the same number of
 %   colours as the current colormap.
@@ -226,6 +229,10 @@ if strcmp(ctype,'qual')
     warning('CBREWER2:QualTooManyColors', ...
         ['Too many colors requested: cannot interpolate a qualitative' ...
         ' colorscheme']);
+    % Cycle the colours from the beginning again, so we have enough to
+    % return
+    colormap = repmat(colormap, ceil(ncol / size(colormap, 1)), 1);
+    colormap = colormap(1:ncol, :);
     return;
 end
 
