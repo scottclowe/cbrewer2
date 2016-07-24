@@ -24,6 +24,11 @@
 %               discontinuities at C=0 and H=0)
 %     Anything else supported by COLORSPACE will also function.
 %
+%   The input format CBREWER2(TYPE, ...) can also be used, where TYPE is
+%   one of 'seq', 'div', 'qual'. This input is redandant and will be
+%   ignored. This input format is provided for backwards compatibility with
+%   the original CBREWER.
+%
 %   Example 1 (sequential heatmap):
 %       C = [0 2 4 6; 8 10 12 14; 16 18 20 22];
 %       imagesc(C);
