@@ -53,7 +53,7 @@
 %   was converted to .mat format by Charles Robert for use with CBREWER.
 %   CBREWER is available from the MATLAB FileExchange under the MIT license.
 %
-%   See also CBREWER, COLORSPACE, INTERP1, UPLAB2CIELAB.
+%   See also CBREWER, COLORSPACE, INTERP1.
 
 
 %   Copyright (c) 2014 Scott Lowe
