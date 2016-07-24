@@ -194,12 +194,13 @@ end
 Tmp = load('colorbrewer.mat');
 colorbrewer = Tmp.colorbrewer;
 
-[TF, idict] = ismember(cname, cbdict(:, 1));
+[TF, idict] = ismember(lower(cname), lower(cbdict(:, 1)));
 
 if ~TF
     error('%s is not a recognised Brewer colormap',cname);
 end
 
+cname = cbdict{idict, 1};
 ctype = cbdict{idict, 2};
 
 if (~isfield(colorbrewer.(ctype), cname))
