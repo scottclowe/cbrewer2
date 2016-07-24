@@ -179,16 +179,6 @@ if isempty(interp_space)
     interp_space = 'lab';
 end
 
-% Make sure we have colorspace downloaded from the FEX
-if ~strcmpi(interp_space, 'rgb') && ~exist('colorspace.m', 'file')
-    P = requireFEXpackage(28790);
-    if isempty(P);
-        error(...
-            ['You need to download COLORSPACE from the MATLAB FEX and' ...
-            ' add it to the MATLAB path.']);
-    end;
-end
-
 
 % Load colorbrewer data ---------------------------------------------------
 Tmp = load('colorbrewer.mat');
@@ -240,6 +230,16 @@ if strcmp(ctype,'qual')
     colormap = repmat(colormap, ceil(ncol / size(colormap, 1)), 1);
     colormap = colormap(1:ncol, :);
     return;
+end
+
+% Make sure we have colorspace downloaded from the FEX
+if ~strcmpi(interp_space, 'rgb') && ~exist('colorspace.m', 'file')
+    P = requireFEXpackage(28790);
+    if isempty(P);
+        error(...
+            ['You need to download COLORSPACE from the MATLAB FEX and' ...
+            ' add it to the MATLAB path.']);
+    end;
 end
 
 % Move to perceptually uniform space
