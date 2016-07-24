@@ -1,3 +1,5 @@
+[![MATLAB FileExchange](https://img.shields.io/badge/MATLAB-FileExchange-orange.svg)][fex]
+
 cbrewer2
 ========
 
@@ -87,3 +89,6 @@ permission, please contact Cynthia Brewer at cbrewer@psu.edu.
 5. Products derived from this software may not be called "ColorBrewer", nor
 may "ColorBrewer" appear in their name, without prior written permission of
 Cynthia Brewer.
+
+
+  [fex]: http://mathworks.com/matlabcentral/fileexchange/58350-scottclowe-cbrewer2
