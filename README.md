@@ -14,7 +14,7 @@ the scheme.
 Requirements
 ------------
 
-To interpolate the colour schemes in CIELab space, the FEX package
+To interpolate the colour schemes in CIELAB space, the FEX package
 [colorspace](https://www.mathworks.com/matlabcentral/fileexchange/28790-colorspace-transformations)
 is required.
 
