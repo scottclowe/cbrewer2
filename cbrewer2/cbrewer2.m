@@ -173,7 +173,7 @@ if isempty(ncol)
     ncol = size(get(gcf,'colormap'), 1);
 end
 if isempty(interp_method)
-    interp_method = 'cubic';
+    interp_method = 'pchip';
 end
 if isempty(interp_space)
     interp_space = 'lab';
